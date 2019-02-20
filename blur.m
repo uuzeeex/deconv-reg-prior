@@ -26,7 +26,7 @@ X_ext = [X_x  X_ud X_x
          X_x  X_ud X_x];
 
 B_ext = zeros(size(X_ext));
-       
+
 for i = 1 : d
   B_ext(:, :, i) = conv2(X_ext(:, :, i), K(:, :, i), 'same') + std * randn(size(X_ext(:, :, i)));
 end

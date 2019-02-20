@@ -1,5 +1,5 @@
 addpath(genpath(pwd));
-PSF_init = P;
+
 [n, m, d] = size(B);
 
 P = zeros(9, 9, d);
@@ -7,6 +7,8 @@ P = zeros(9, 9, d);
 for i = 1 : d
   P(:, :, i) = psfMoffat([9, 9], 2, 1);
 end
+
+PSF_init = P;
 
 X_deblur = zeros(n, m, d);
 X_deblur_prev = zeros(n, m, d);
